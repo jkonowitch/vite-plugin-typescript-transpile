@@ -1,0 +1,22 @@
+{
+  "name": "vite-plugin-typescript-transpile",
+  "version": "0.5.0",
+  "description": "Use the official typescript library to transpile modules in Vite",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./index.js"
+    }
+  },
+  "keywords": [
+    "vite",
+    "vite plugin typescript"
+  ],
+  "author": "Jeffrey Konowitch",
+  "license": "MIT",
+  "peerDependencies": {
+    "typescript": ">2.0"
+  }
+}
