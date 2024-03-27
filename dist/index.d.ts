@@ -1,6 +1,8 @@
-export declare function vitePluginTypescriptTranspile({ fileRegex, cwd }: {
-    fileRegex?: RegExp | undefined;
-    cwd?: string | undefined;
+import { CompilerOptions } from 'typescript';
+export declare function vitePluginTypescriptTranspile({ fileRegex, cwd, compilerOverrides }: {
+    fileRegex: RegExp;
+    cwd: string;
+    compilerOverrides: CompilerOptions;
 }): {
     name: string;
     transform(src: string, id: string): {

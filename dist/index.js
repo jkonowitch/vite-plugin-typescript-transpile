@@ -1,5 +1,11 @@
 import typescript from 'typescript';
-export function vitePluginTypescriptTranspile({ fileRegex = /\.ts$/, cwd = process.cwd() }) {
+export function vitePluginTypescriptTranspile({ fileRegex = /\.ts$/, cwd = process.cwd(), compilerOverrides = {
+    inlineSources: true,
+    inlineSourceMap: true,
+    sourceMap: false,
+    moduleResolution: typescript.ModuleResolutionKind.Bundler,
+    module: typescript.ModuleKind.ES2022
+} }) {
     const fileName = typescript.findConfigFile(cwd, typescript.sys.fileExists);
     if (!fileName)
         throw 'tsconfig.json not found!';
@@ -12,9 +18,7 @@ export function vitePluginTypescriptTranspile({ fileRegex = /\.ts$/, cwd = proce
     const parsedTsConfig = typescript.parseJsonConfigFileContent(result.config, typescript.sys, cwd);
     const compilerOptions = {
         ...parsedTsConfig.options,
-        inlineSources: true,
-        inlineSourceMap: true,
-        sourceMap: false
+        ...compilerOverrides
     };
     return {
         name: 'typescript-transpile',
