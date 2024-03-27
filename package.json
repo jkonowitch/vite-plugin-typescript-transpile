@@ -23,5 +23,8 @@
   "license": "MIT",
   "peerDependencies": {
     "typescript": ">2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.30"
   }
 }
