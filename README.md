@@ -15,9 +15,7 @@ Users must enable `isolatedModules` in their `tsconfig.json` file to ensure comp
 Install the plugin with your package manager of choice:
 
 ```bash
-npm install vite-plugin-tsc
-# or
-yarn add vite-plugin-tsc
+npm install vite-plugin-typescript-transpile
 ```
 
 ## Usage
@@ -26,7 +24,7 @@ To use this plugin, import it and include it in the `plugins` array of your Vite
 
 ```javascript
 import { defineConfig } from 'vite';
-import { vitePluginTypescriptTranspile } from 'vite-plugin-tsc';
+import { vitePluginTypescriptTranspile } from 'vite-plugin-typescript-transpile';
 
 export default defineConfig({
   plugins: [vitePluginTypescriptTranspile({})]
