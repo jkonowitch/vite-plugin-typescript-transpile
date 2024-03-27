@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-typescript-transpile",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "description": "Use the official typescript library to transpile modules in Vite",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",

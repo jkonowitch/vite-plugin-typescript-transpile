@@ -6,7 +6,7 @@ export function vitePluginTypescriptTranspile({ fileRegex = /\.ts$/, cwd = proce
   sourceMap: false,
   moduleResolution: typescript.ModuleResolutionKind.Bundler,
   module: typescript.ModuleKind.ES2022
-} }: { fileRegex: RegExp, cwd: string; compilerOverrides: CompilerOptions }) {
+} }: { fileRegex?: RegExp, cwd?: string; compilerOverrides?: CompilerOptions }) {
   const fileName = typescript.findConfigFile(cwd, typescript.sys.fileExists);
   if (!fileName) throw 'tsconfig.json not found!';
 
